@@ -20,3 +20,10 @@ while i > 0:
     i -= 1
 
 print("%.2f,%.2f,%d" % (up, down, up/down))
+
+
+n = eval(input())
+dayup = pow(1+n/1000, 365)
+daydown = pow(1-n/1000, 365)
+
+print("%.2f,%.2f,%d" % (dayup, daydown, dayup/daydown))
