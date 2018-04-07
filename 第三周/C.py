@@ -1,6 +1,6 @@
 # coding=utf-8
 """
- 一年365天，以第1天的能力值为基数，记为1.0。
+一年365天，以第1天的能力值为基数，记为1.0。
 
 当好好学习时，能力值相比前一天提高N‰；当没有学习时，能力值相比前一天下降N‰。
 
@@ -12,18 +12,23 @@
 """
 
 n = eval(input())
-up = down = 1
-i = 365
-while i > 0:
-    up *= (1+n/1000)
-    down *= (1-n/1000)
-    i -= 1
-
-print("%.2f,%.2f,%d" % (up, down, up/down))
+dayUp = pow(1+n/1000, 365)
+dayDown = pow(1-n/1000, 365)
+print("%.2f,%.2f,%.2f" % (dayUp, dayDown, dayUp/dayDown))
 
 
-n = eval(input())
-dayup = pow(1+n/1000, 365)
-daydown = pow(1-n/1000, 365)
 
-print("%.2f,%.2f,%d" % (dayup, daydown, dayup/daydown))
+
+
+
+# n = eval(input())
+# up = down = 1
+# i = 365
+# while i > 0:
+#     up *= (1+n/1000)
+#     down *= (1-n/1000)
+#     i -= 1
+#
+# print("%.2f,%.2f,%d" % (up, down, up/down))
+
+
